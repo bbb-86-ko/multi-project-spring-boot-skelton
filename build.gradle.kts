@@ -7,10 +7,11 @@ plugins {
     id("io.spring.dependency-management") version "1.0.10.RELEASE"
 }
 
-group = "org.bbb.skelton"
-version = "1.0-SNAPSHOT"
-
 allprojects {
+
+    group = "org.bbb.skelton"
+    version = "1.0-SNAPSHOT"
+
     repositories {
         mavenCentral()
     }
@@ -19,6 +20,8 @@ allprojects {
 subprojects {
 
     apply(plugin = "kotlin")
+    apply(plugin = "org.jetbrains.kotlin.jvm")
+    apply(plugin = "org.jetbrains.kotlin.plugin.spring")
     apply(plugin = "org.springframework.boot")
     apply(plugin = "io.spring.dependency-management")
 
